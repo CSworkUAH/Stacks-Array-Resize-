@@ -1,0 +1,246 @@
+======================================================================
+OUTPUT FOR p03input1.txt
+======================================================================
+
+## p03input1.txt -- Test: Stack(), Push(), Pop(), and Top()
+
+Stack(8) -- Successful
+Print() -- Top { } Bottom
+Top() -- Top() -- Failed Empty Stack
+Push(5) -- successful
+Push(10) -- successful
+Push(15) -- successful
+Print() -- Top { 15 10 5 } Bottom
+Top() -- 15
+Push(20) -- successful
+Push(25) -- successful
+Push(30) -- successful
+Print() -- Top { 30 25 20 15 10 5 } Bottom
+Top() -- 30
+Pop() -- successful
+Pop() -- successful
+Print() -- Top { 20 15 10 5 } Bottom
+Push(35) -- successful
+Push(40) -- successful
+Top() -- 40
+Push(45) -- successful
+Top() -- 45
+Print() -- Top { 45 40 35 20 15 10 5 } Bottom
+Pop() -- successful
+Pop() -- successful
+Pop() -- successful
+Pop() -- successful
+Pop() -- successful
+Pop() -- successful
+Pop() -- successful
+Pop() -- Failed Empty Stack
+Print() -- Top { } Bottom
+Top() -- Top() -- Failed Empty Stack
+~Stack()
+
+
+Stack(4) -- Successful
+Print() -- Top { } Bottom
+Pop() -- Failed Empty Stack
+Top() -- Top() -- Failed Empty Stack
+~Stack()
+
+
+======================================================================
+OUTPUT FOR p03input2.txt
+======================================================================
+
+## p03input2.txt -- Test IsFull(), IsEmpty(), and MakeEmpty()
+
+Stack(8) -- Successful
+IsEmpty() -- true
+IsFull() -- false
+Push(5) -- successful
+Push(10) -- successful
+Push(15) -- successful
+Push(20) -- successful
+Push(25) -- successful
+Push(30) -- successful
+Print() -- Top { 30 25 20 15 10 5 } Bottom
+IsEmpty() -- false
+IsFull() -- false
+MakeEmpty()
+Print() -- Top { } Bottom
+IsEmpty() -- true
+IsFull() -- false
+Push(35) -- successful
+Push(40) -- successful
+Push(45) -- successful
+Push(50) -- successful
+Print() -- Top { 50 45 40 35 } Bottom
+IsEmpty() -- false
+IsFull() -- false
+Pop() -- successful
+Pop() -- successful
+Pop() -- successful
+Print() -- Top { 35 } Bottom
+IsEmpty() -- false
+IsFull() -- false
+MakeEmpty()
+Print() -- Top { } Bottom
+IsEmpty() -- true
+IsFull() -- false
+~Stack()
+
+
+======================================================================
+OUTPUT FOR p03input3.txt
+======================================================================
+
+## p03input3.txt -- Test Size(), Capacity()
+# Test Size()
+
+Stack(6) -- Successful
+Print() -- Top { } Bottom
+Size() -- 0
+Push(5) -- successful
+Push(10) -- successful
+Print() -- Top { 10 5 } Bottom
+Size() -- 2
+Push(15) -- successful
+Push(20) -- successful
+Print() -- Top { 20 15 10 5 } Bottom
+Size() -- 4
+Push(25) -- successful
+Push(30) -- successful
+Print() -- Top { 30 25 20 15 10 5 } Bottom
+Size() -- 6
+Pop() -- successful
+Pop() -- successful
+Pop() -- successful
+Print() -- Top { 15 10 5 } Bottom
+Size() -- 3
+Pop() -- successful
+Pop() -- successful
+Pop() -- successful
+Print() -- Top { } Bottom
+Size() -- 0
+~Stack()
+
+# Test Capacity()
+
+Stack(2) -- Successful
+Capacity() -- 2
+Push(5) -- successful
+Capacity() -- 2
+Push(10) -- successful
+Capacity() -- 2
+Push(15) -- successful
+Capacity() -- 4
+Push(20) -- successful
+Capacity() -- 4
+Push(25) -- successful
+Capacity() -- 8
+Push(30) -- successful
+Capacity() -- 8
+Print() -- Top { 30 25 20 15 10 5 } Bottom
+Pop() -- successful
+Pop() -- successful
+Pop() -- successful
+Capacity() -- 8
+Print() -- Top { 15 10 5 } Bottom
+Pop() -- successful
+Pop() -- successful
+Pop() -- successful
+Capacity() -- 8
+Print() -- Top { } Bottom
+~Stack()
+
+
+======================================================================
+OUTPUT FOR p03input4.txt
+======================================================================
+
+## p03input4.txt -- Test Min() and Max()
+
+Stack(8) -- Successful
+Min() -- Min() -- Failed Empty Stack
+Max() -- Max() -- Failed Empty Stack
+Push(5) -- successful
+Push(30) -- successful
+Push(15) -- successful
+Push(20) -- successful
+Push(50) -- successful
+Push(10) -- successful
+Print() -- Top { 10 50 20 15 30 5 } Bottom
+Min() -- 5
+Max() -- 50
+Push(20) -- successful
+Push(50) -- successful
+Push(5) -- successful
+Print() -- Top { 5 50 20 10 50 20 15 30 5 } Bottom
+Min() -- 5
+Max() -- 50
+Pop() -- successful
+Pop() -- successful
+Pop() -- successful
+Print() -- Top { 10 50 20 15 30 5 } Bottom
+Min() -- 5
+Max() -- 50
+Pop() -- successful
+Pop() -- successful
+Pop() -- successful
+Print() -- Top { 15 30 5 } Bottom
+Min() -- 5
+Max() -- 30
+~Stack()
+
+
+======================================================================
+OUTPUT FOR p03input5.txt
+======================================================================
+
+## p03input5.txt -- Test Peek(n)
+
+Stack(8) -- Successful
+Peek(0) -- Peek(0) -- Failed Invalid Peek
+Push(5) -- successful
+Push(30) -- successful
+Push(15) -- successful
+Push(20) -- successful
+Push(50) -- successful
+Push(10) -- successful
+Print() -- Top { 10 50 20 15 30 5 } Bottom
+Peek(0) -- 10
+Peek(1) -- 50
+Peek(2) -- 20
+Peek(3) -- 15
+Peek(4) -- 30
+Peek(5) -- 5
+Peek(6) -- Peek(6) -- Failed Invalid Peek
+Print() -- Top { 10 50 20 15 30 5 } Bottom
+Pop() -- successful
+Pop() -- successful
+Pop() -- successful
+Print() -- Top { 15 30 5 } Bottom
+Peek(0) -- 15
+Peek(1) -- 30
+Peek(2) -- 5
+Peek(5) -- Peek(5) -- Failed Invalid Peek
+Print() -- Top { 15 30 5 } Bottom
+Pop() -- successful
+Pop() -- successful
+Pop() -- successful
+Print() -- Top { } Bottom
+Peek(0) -- Peek(0) -- Failed Invalid Peek
+Peek(1) -- Peek(1) -- Failed Invalid Peek
+Peek(2) -- Peek(2) -- Failed Invalid Peek
+Peek(3) -- Peek(3) -- Failed Invalid Peek
+Peek(4) -- Peek(4) -- Failed Invalid Peek
+Peek(5) -- Peek(5) -- Failed Invalid Peek
+Push(25) -- successful
+Push(9) -- successful
+Push(8) -- successful
+Print() -- Top { 8 9 25 } Bottom
+Peek(0) -- 8
+Peek(1) -- 9
+Peek(2) -- 25
+Peek(3) -- Peek(3) -- Failed Invalid Peek
+Peek(4) -- Peek(4) -- Failed Invalid Peek
+Peek(5) -- Peek(5) -- Failed Invalid Peek
+~Stack()
